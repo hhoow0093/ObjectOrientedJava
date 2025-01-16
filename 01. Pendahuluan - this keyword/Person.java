@@ -4,17 +4,16 @@ class Person {
     final String country = "Indonesia";
 
     // buat constuctor namanya harus sama dengan nama class
-    Person(String Name, String Adress) {
-        name = Name;
-        adress = Adress;
+    Person(String name, String adress) {
+        this.name = name;
+        this.adress = adress;
     }
 
     // 2nd constructor
-    Person(String Name) {
-        // name = Name;
+    Person(String name) {
 
         //memanggil constructor atas
-        this(Name, null);
+        this(name, null);
     }
 
     //3rd constuctor
