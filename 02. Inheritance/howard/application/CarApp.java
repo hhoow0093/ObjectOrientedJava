@@ -8,6 +8,8 @@ public class CarApp {
         Car car1 = new Avanza();
         car1.carDetail();
         car1.carTire();
+        System.out.println(car1.getBrand());
     }
 
 }
+

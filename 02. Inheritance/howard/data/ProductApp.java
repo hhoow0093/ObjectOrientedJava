@@ -9,6 +9,13 @@ public class ProductApp {
         System.out.println(produk1.name);
         System.out.println(produk1.price);
 
+        System.out.println(produk1);
+
+        Product produk2 = new Product("macbook pro", 3000000);
+
+        System.out.println(produk1.equals(produk2));
+        System.out.println(produk1.hashCode() == produk2.hashCode());
+
         
     }
 

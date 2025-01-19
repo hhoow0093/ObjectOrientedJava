@@ -17,6 +17,39 @@ public class Product {
         this.price = price;
 
     }
+
+    // override toString() method
+    public String toString() {
+        return "Product name: " + name + " product price " + price;
+    }
+
+    // override equals method
+    public boolean equals(Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (!(o instanceof Product)) {
+            return false;
+        }
+
+        Product product = (Product) o;
+        if (this.price != product.price) {
+            return false;
+        }
+
+        if (this.name != null) {
+            return this.name.equals(product.name);
+        } else {
+            return product.name == null;
+        }
+
+    }
+
+    public int hashCode() {
+        int result = this.name != null ? name.hashCode() : 0;
+        result = 31 * result + this.price;
+        return result;
+    }
 }
 
 // access modifier
